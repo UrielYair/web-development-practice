@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Exercise</title>
+</head>
+<body>
+	<h1>Register</h1>
+	<form>
+		<label for='first name'>First Name:</label>
+		<input id='first name' type="text" name="firstName"
+		placeholder="John" required>
+
+		<label for='last name'>Last Name:</label>
+		<input id='last name' type="text" name="lastName"
+		placeholder="Smith" required>
+
+		<div>
+			<label for="male">Male</label>
+			<input type="radio" id="male" name="gender" value="male">
+			
+			<label for="female">Female</label>
+			<input type="radio" id="female" name="gender" value="female">
+			
+			<label for="other">Other</label>
+			<input type="radio" id="other" name="gender" value="other">
+		</div>
+		
+
+		<label for='Email'>Email:</label>
+		<input id='Email' type="Email" name="email"
+		placeholder="your email" required>
+
+		<label for='password'>Password:</label>
+		<input id='password' type="password" name="password" 
+		pattern=".{5,10}" required title="5 to 10 characters" required>
+
+		<br>
+		
+		<label for="birthday">Birthday:</label>
+		<input type="date" id="birthday" name="birthday">
+
+		<br>
+
+		<label for="agreement">I agree to the terms and conditions</label>
+		<input id="agreement" type="checkbox" required>
+<!-- name="agreement" value="agreement" -->
+		<br>
+
+		<input type="submit">
+
+		
+	</form>
+</body>
+</html>
