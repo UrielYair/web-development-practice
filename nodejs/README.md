@@ -11,3 +11,9 @@ $ npm install knock-knock-jokes
 $ npm install faker
 ```
 
+> EJS Demo requires installing express and ejs (saved in the package.json file):
+
+```shell
+$ npm install
+```
+
