@@ -1,0 +1,10 @@
+<%- include("partials/header") %>
+
+<h1>Message Page!</h1>
+<p>hello <strong> <%= name %> </strong></p>
+
+<% if (name.toLowerCase() === 'uriel' ){ %>
+    <h1>Hey... I remember you!</h1>
+<% } %>
+
+<%- include("partials/footer") %>
