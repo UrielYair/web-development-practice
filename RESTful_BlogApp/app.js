@@ -24,7 +24,7 @@ app.get("/",(req, res)=>{
     res.redirect("/blogs");
 });
 
-app.get("/blogs",(req, res)=>{
+app.get("/blogs", (req, res)=>{
     Blog.find({}, (err,blogs)=>{
         if (err){
             console.log("Error!!");
@@ -33,6 +33,24 @@ app.get("/blogs",(req, res)=>{
             res.render("index", {blogs: blogs});
         }
     })
+});
+
+app.get("/blogs/new",(req, res)=>{
+    res.render("new");
+});
+
+app.post("/blogs", (req, res)=>{
+    
+    Blog.create(req.body.blog, (err, blog)=> {
+        if (err){
+            console.log("ERROR while creating new post.");
+            console.log(err);
+            res.render("new");
+        }
+        else{
+            res.redirect("/blogs");
+        }
+    });
 });
 
 app.listen(PORT,()=>{
