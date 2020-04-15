@@ -20,10 +20,13 @@ var blogSchema = new mongoose.Schema({
 var Blog = mongoose.model("Blog", blogSchema);
 
 //RESTful routes
+
+// Landing Page
 app.get("/",(req, res)=>{
     res.redirect("/blogs");
 });
 
+//Show Blogs
 app.get("/blogs", (req, res)=>{
     Blog.find({}, (err,blogs)=>{
         if (err){
@@ -35,12 +38,12 @@ app.get("/blogs", (req, res)=>{
     })
 });
 
+// Add New blog
 app.get("/blogs/new",(req, res)=>{
     res.render("new");
 });
 
 app.post("/blogs", (req, res)=>{
-    
     Blog.create(req.body.blog, (err, blog)=> {
         if (err){
             console.log("ERROR while creating new post.");
@@ -49,6 +52,18 @@ app.post("/blogs", (req, res)=>{
         }
         else{
             res.redirect("/blogs");
+        }
+    });
+});
+
+// Show page
+app.get("/blogs/:id",(req, res)=>{
+    Blog.findById(req.params.id, (err, foundBlog)=>{
+        if (err){
+            res.redirect("/blogs/");
+        }
+        else{
+            res.render("show", {blog: foundBlog});
         }
     });
 });
