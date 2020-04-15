@@ -53,6 +53,7 @@ app.get("/blogs/new",(req, res)=>{
 
 //Create Route
 app.post("/blogs", (req, res)=>{
+    req.body.blog.body = req.sanitize(req.body.blog.body);
     Blog.create(req.body.blog, (err, blog)=> {
         if (err){
             console.log("ERROR while creating new post.");
@@ -93,6 +94,7 @@ app.get("/blogs/:id/edit",(req, res)=>{
 
 // Update Route
 app.put("/blogs/:id", (req, res)=>{
+    req.body.blog.body = req.sanitize(req.body.blog.body);
     Blog.findByIdAndUpdate(req.params.id, req.body.blog, (err, updatedBlog)=>{
         if (err){
             res.redirect("/blogs");
