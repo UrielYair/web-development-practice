@@ -87,6 +87,7 @@ app.get("/blogs/:id/edit",(req, res)=>{
     });
     
 });
+
 // Update Route
 app.put("/blogs/:id", (req, res)=>{
     Blog.findByIdAndUpdate(req.params.id, req.body.blog, (err, updatedBlog)=>{
@@ -99,6 +100,16 @@ app.put("/blogs/:id", (req, res)=>{
     })
 })
 
+app.delete("/blogs/:id", (req, res) =>{
+    Blog.findByIdAndRemove(req.params.id,err=>{
+        if (err){
+            res.redirect("/blogs/");
+        }
+        else{
+            res.redirect("/blogs/");
+        }
+    })
+});
 
 app.listen(PORT,()=>{
     console.log("Blog App is running...");
