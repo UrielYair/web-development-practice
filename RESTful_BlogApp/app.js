@@ -3,7 +3,8 @@ const   PORT            = 5000,
         app             = express(),
         bodyParser      = require("body-parser"),
         mongoose        = require("mongoose"),
-        methodOverride  = require("method-override");
+        methodOverride  = require("method-override"),
+        expressSanitizer= require("express-sanitizer");
 
 // app config
 mongoose.connect("mongodb://localhost/restful_blog_app", { 
@@ -12,6 +13,7 @@ mongoose.connect("mongodb://localhost/restful_blog_app", {
     useFindAndModify: false
 });
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(expressSanitizer());
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(methodOverride("_method"));
@@ -49,6 +51,7 @@ app.get("/blogs/new",(req, res)=>{
     res.render("new");
 });
 
+//Create Route
 app.post("/blogs", (req, res)=>{
     Blog.create(req.body.blog, (err, blog)=> {
         if (err){
