@@ -1,4 +1,4 @@
-const   PORT            = 5000,
+const   PORT            = process.env.PORT || 3000,
         express         = require("express"), 
         app             = express(),
         bodyParser      = require("body-parser"),
@@ -7,11 +7,14 @@ const   PORT            = 5000,
         expressSanitizer= require("express-sanitizer");
 
 // app config
-mongoose.connect("mongodb://localhost/restful_blog_app", { 
+
+process.env.DATEBASEURL = process.env.DATEBASEURL || "mongodb://localhost/restful_blog_app";
+mongoose.connect(process.env.DATEBASEURL, { 
     useNewUrlParser: true, 
     useUnifiedTopology: true,
     useFindAndModify: false
 });
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressSanitizer());
 app.set("view engine", "ejs");
