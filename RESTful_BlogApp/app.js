@@ -1,4 +1,4 @@
-const   PORT            = process.env.PORT || 5000,
+const   PORT            = process.env.PORT || 3000,
         express         = require("express"), 
         app             = express(),
         bodyParser      = require("body-parser"),
@@ -8,8 +8,8 @@ const   PORT            = process.env.PORT || 5000,
 
 // app config
 
-process.env.DATEBASEURL = process.env.DATEBASEURL || "mongodb://localhost/restful_blog_app";
-mongoose.connect(process.env.DATEBASEURL, { 
+url = process.env.DATEBASEURL || "mongodb://localhost/restful_blog_app";
+mongoose.connect(url, { 
     useNewUrlParser: true, 
     useUnifiedTopology: true,
     useFindAndModify: false
