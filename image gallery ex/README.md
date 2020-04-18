@@ -1,4 +1,4 @@
-# Bootstrap practice.
+# Image gallery CSS.
 
 ![gallery](https://github.com/UrielYair/web-development-practice/blob/master/image%20gallery%20ex/screencapture-gallery.png?raw=true)
 
