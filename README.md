@@ -2,7 +2,7 @@
 HTML, CSS, JavaScript, Bootstrap, SemanticUI, Node.js, Express, MongoDB, Mongoose, FontAwesome, jQuery, EJS
 
 
-* [RESTful Blog App](https://github.com/UrielYair/web-development-practice/tree/master/RESTful_BlogApp) - Deployed on [Heroku](https://uriel-restful-blogapp.herokuapp.com/)
+* [RESTful Blog App](https://github.com/UrielYair/web-development-practice/tree/master/RESTful_BlogApp) - Deployed on [Heroku](https://uriel-restful-blogapp.herokuapp.com/) - Currently not available because of MongoDB limitation for one cluster for the free account.
 
 * [Score Keeper](https://github.com/UrielYair/web-development-practice/tree/master/Score%20Keeper%20project)
 

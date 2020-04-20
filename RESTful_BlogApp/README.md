@@ -8,7 +8,7 @@ RESTful web application for blog posts.
 - REST endpoints
 
 ### Deployment
-> [Heroku](https://uriel-restful-blogapp.herokuapp.com/) - [Link](https://uriel-restful-blogapp.herokuapp.com/)  
+> [Heroku](https://uriel-restful-blogapp.herokuapp.com/) - [Link](https://uriel-restful-blogapp.herokuapp.com/)  - Currently not available because of MongoDB limitation for one cluster for the free account, you can run it locally :)
 
 
 **Packages:**
