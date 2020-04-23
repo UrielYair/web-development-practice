@@ -4,6 +4,8 @@ HTML, CSS, JavaScript, Bootstrap, SemanticUI, Node.js, Express, MongoDB, Mongoos
 
 * [RESTful Blog App](https://github.com/UrielYair/web-development-practice/tree/master/RESTful_BlogApp) - Deployed on [Heroku](https://uriel-restful-blogapp.herokuapp.com/) - Currently not available because of MongoDB limitation for one cluster for the free account.
 
+* [Authentication Ex.](https://github.com/UrielYair/web-development-practice/tree/master/Authentication)
+
 * [Score Keeper](https://github.com/UrielYair/web-development-practice/tree/master/Score%20Keeper%20project)
 
 * [RGB color guessing game](https://github.com/UrielYair/web-development-practice/tree/master/color%20game%20project)
